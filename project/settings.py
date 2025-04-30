@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-o88n#)j_sg1s5=%xc)s#ovyjl1=kisiidns$5can=z(9du)m59'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -38,8 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.auth',
 ]
 
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -112,3 +114,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 engine = Engine(dirs=os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'project.settings'))
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"

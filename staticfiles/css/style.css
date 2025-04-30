@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+}
+
+body {
+  background-color: #f8fafc;
+  color: #002b08;
+  font-family: Arial, sans-serif;
+}
+
+nav {
+  display: flex;
+  background-color: #86a789;
+  padding: 30px;
+  align-content: right;
+}
+
+nav > .btn-box {
+  display: flex;
+  gap: 10px;
+}
+
+aside,
+main {
+  margin: 2rem 1rem;
+}
+
+p,
+ul,
+ol,
+span {
+  font-size: 24px;
+  margin: 3rem 1rem;
+}
+
+h1,
+h2,
+h3 {
+  margin: 3rem 0 0 0;
+}
+
+footer {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  background-color: #739072;
+  padding: 5rem;
+  color: #fff;
+}
+
+footer img {
+  border-radius: 30%;
+  display: block;
+}
+
+footer a {
+  display: inline-block;
+}
+
+.last {
+  color: red;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: #002b08;
+  padding: 10px 20px;
+  border: 1px solid #9ba8b4;
+  border-radius: 10%;
+  margin: 5px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn:active {
+  margin-top: 7px;
+  margin-left: 7px;
+  background-color: #000000;
+  color: #d0d0d0;
+}
+
+nav .btn:active {
+  margin-bottom: 3px;
+  margin-right: 3px;
+}
+
+nav h1 {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary {
+  padding: 13px 27px;
+  font-size: 1.2rem;
+}
+
+#logo {
+  width: 50px;
+  height: 50px;
+}
+
+#baner {
+  width: 100%;
+  height: 200px;
+}
+
+#footer-logo {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+  height: 100%;
+}
+
+address {
+  position: relative;
+}
+
+@media (max-width: 800px) {
+  #logo {
+    display: none;
+  }
+  footer {
+    padding: 50px;
+  }
+
+  #footer-logo {
+    display: none;
+  }
+  nav h1 {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  body {
+    font-size: 10px;
+  }
+  nav > .btn-box {
+    gap: 3px;
+    margin: 0 auto;
+  }
+  .btn {
+    padding: 7px 13px;
+  }
+  p,
+  ul,
+  ol,
+  span {
+    font-size: 18px;
+    margin: 10px;
+  }
+}
+
+@media (max-width: 450px) {
+  nav > .btn-box {
+    gap: 2px;
+  }
+  .btn-box > .btn {
+    padding: 5px 10px;
+  }
+  nav {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  background-color: #f8fafc;
+}
+
+nav {
+  background-color: #86a789;
+  padding: 30px;
+}
+
+nav > .btn-box {
+  display: flex;
+  margin-left: auto;
+  gap: 10px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: #002b08;
+  padding: 10px 20px;
+  border: 1px solid #9ba8b4;
+  border-radius: 10%;
+  margin: 5px 5px 5px 0;
+  color: #fff;
+  text-decoration: none;
+}
+
+form {
+  width: 400px;
+}
+
+form a {
+  position: relative;
+  bottom: -20px;
+  font-size: 1rem;
+}
+
+form button {
+  font-style: normal;
+  position: relative;
+  bottom: -20px;
+  display: inline-block;
+  font-size: 1rem;
+}
+
+input {
+  width: 100%;
+  height: 2rem;
+}
+
+.btn.second {
+  background-color: #0066ff;
+  border-color: #9ba8b4;
+  color: rgb(255, 255, 255);
+}
+
+.btn:active {
+  background-color: #000000;
+  color: #d0d0d0;
+}
+
+nav .btn:active {
+  margin-top: 7px;
+  margin-left: 7px;
+  margin-bottom: 3px;
+  margin-right: 3px;
+}
+
+.btn.second:active {
+  background-color: #0044ab;
+  color: #d0d0d0;
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 10px;
+  }
+  #logo {
+    display: none;
+  }
+  footer {
+    padding: 50px;
+  }
+  p {
+    font-size: 18px;
+    margin: 10px;
+  }
+  .btn {
+    padding: 7px 13px;
+  }
+  form {
+    width: 200px;
+  }
+  input {
+    height: 16px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+}
