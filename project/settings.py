@@ -110,3 +110,5 @@ MEDIA_ROOT = BASE_DIR / 'media'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 engine = Engine(dirs=os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'project.settings'))
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
