@@ -1,0 +1,50 @@
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "asideing content"
+    "asideing content"
+    "footer footer";
+}
+
+#main-content {
+  grid-area: content;
+}
+
+footer {
+  grid-area: footer;
+  margin-top: 5rem;
+}
+
+ul,
+ol {
+  padding: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  main {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "asideing"
+      "content"
+      "footer";
+    margin: 1rem 0 1rem 0;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-size: 20px;
+  }
+
+  #main-content {
+    margin: 0rem 1rem;
+  }
+  .btn-primary {
+    font-size: 15px;
+  }
+  .last {
+    margin-bottom: 20px;
+  }
+}

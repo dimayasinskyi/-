@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/shop/authentication.css' %}">
+    <title>Регістрація</title>
+</head>
+
+<body>
+    <nav>
+        <div class="btn-box">
+            <a href="{% url 'index' %}" class="btn">Головна</a>
+        </div>
+    </nav>
+    <main>
+        <form method="POST" action="" id="register">
+            {% csrf_token %}
+            <label for="FirstNameInput">Ім'я</label>
+            <input type="text" name="FirstNameInput" id="FirstNameInput">
+            <label for="LastNameInput">Прізвище</label>
+            <input type="text" name="LastNameInput" id="LastNameInput">
+            <label for="EmailInput">Email</label>
+            <input type="email" name="EmailInput" id="EmailInput">
+            <label for="Password1Input">Пароль</label>
+            <input type="password1" name="Password1Input" id="Password1Input">
+            <label for="Password2Input">Пароль знову</label>
+            <input type="password2" name="Password2Input" id="Password2Input">
+            <button class="btn" type="submit">Зарегеструватися</button>
+            <a href="{% url 'login' %}" class="btn second">Увійти</a>
+        </form>
+    </main>
+
+    <script src="{% static 'js/registration.js' %}"></script>
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+footer {
+  display: none;
+}
+
+#content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "form asideing";
+}
+
+aside {
+  background-color: #dcf2de;
+  width: 90%;
+  grid-area: asideing;
+  box-shadow: 2px 2px 2px rgba(0, 104, 9, 0.514);
+  border: 1px solid rgb(0, 104, 9);
+}
+
+aside h1 {
+  margin-left: 1rem;
+  margin-bottom: 3rem;
+}
+
+aside hr {
+  border: 2px solid rgb(0, 104, 9);
+}
+
+#order input {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  padding: 5px 0 5px 10px;
+  width: 100%;
+}
+
+#order {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  grid-area: form;
+}
+
+#main-img {
+  width: 100%;
+  height: 90%;
+  display: block;
+}
+
+#main-btn {
+  margin-left: 30px;
+  padding: 15px 30px;
+  font-size: 25px;
+}
+
+#input {
+  width: 50%;
+}
+
+#order > figure {
+  margin: 1rem;
+  max-width: 400px;
+  max-height: 200px;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  border: 2px solid black;
+  border-radius: 5%;
+}
+
+#main-img {
+  border-radius: 5%;
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: none;
+}
+
+@media (max-width: 600px) {
+  #order > figure {
+    max-width: 90%;
+    max-height: 90%;
+    margin: 1rem auto;
+  }
+  #main-btn {
+    margin: 1rem;
+  }
+  #order > p {
+    font-size: 2rem;
+    margin: 2rem;
+  }
+  #input {
+    width: 95%;
+  }
+  aside {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  main {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 600px) and (min-height: 650px) {
+  #main-btn {
+    position: fixed;
+    bottom: 0;
+    width: 85%;
+  }
+}

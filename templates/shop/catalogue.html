@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/shop/catalogue.css' %}">
+{% endblock %}
+
+{% block content %}
+<main>
+    {% for car in cars %}
+    <div class="col col-main">
+        <figure>
+            <img src="{{ car.image }}" alt="" width="95%" height="170px">
+        </figure>
+        <h3>{{ car.name }}</h3>
+        <p>{{ car.description }}</p>
+        <a href="{{ car.url }}" class="btn">Переглянути</a>
+    </div>
+    {% endfor %}
+</main>
+{% endblock %}

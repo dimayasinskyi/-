@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/shop/authentication.css' %}">
+    <title>Вхід</title>
+</head>
+
+<body>
+    <nav>
+        <div class="btn-box">
+            <a href="{% url 'index' %}" class="btn">Головна</a>
+        </div>
+    </nav>
+    <main>
+        <form method="POST" action="" id="login">
+
+            <label for="EmailInput">Email</label>
+            <input type="email" name="EmailInput" id="EmailInput">
+            <label for="PasswordInput">Пароль</label>
+            <input type="password" name="PasswordInput" id="PasswordInput">
+            <button class="btn" type="submit">Увійти</button>
+            <a href="{% url 'registration' %}" class="btn second">Зарегеструватися</a>
+        </form>
+    </main>
+
+    <script src="{% static 'js/login.js' %}"></script>
+</body>
+
+</html>

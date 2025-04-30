@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/shop/catalogue.css' %}">
+<link rel="stylesheet" href="{% static 'css/shop/order.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div id="content">
+    <form id="order" action="">
+        <figure>
+            <img src="/static/img/bmw/images.jfif" alt="" id="main-img">
+        </figure>
+        <div id="input">
+            <label for="nameCarInput">Назва:</label>
+            <input type="text" id="nameCarInput" name="nameCarInput" value="BMW 3 Series" readonly
+                placeholder="Назва машини"></input><br>
+            <label for="termTimeInput">Термін в місяцях:</label>
+            <input type="number" id="termTimeInput" name="termTimeInput" value="2"
+                placeholder="Виберіть термін оренди"></input><br>
+            <label for="priceTimeInput">Ціна 1 місяця:</label>
+            <input type="number" id="priceTimeInput" name="priceTimeInput" value="1500" placeholder="Ціна місяця"
+                readonly></input><br>
+            <label for="sumInput">Cума:</label>
+            <input type="number" id="sumInput" name="sumInput" placeholder="Сума" readonly></input>
+        </div>
+        <div id="box-main-btn">
+            <button type="submit" class="btn" id="main-btn">Оплатити</button>
+        </div>
+    </form>
+    <aside>
+        <h1>Опис</h1>
+        <hr>
+        <p>Тип: Седан<br>
+            Двигун: 2.0 L I4 Turbo<br>
+            Потужність: 255 к.с.<br>
+            Розгін 5.6<br>
+            Витрати пального: 7.5 л/100 км (місто), 5.0 л/100 км (трасса)<br>
+            Ціна/міс: $1500</p>
+    </aside>
+</div>
+
+<script src="{% static 'js/order.js' %}"></script>
+{% endblock %}

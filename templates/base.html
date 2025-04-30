@@ -1,0 +1,50 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% block css %} {% endblock %}
+    <title>{{ title }}</title>
+</head>
+
+<body>
+    {% if banner %}
+    <section id="baner"
+        style="background: url({% static 'img/banner.gif' %}) no-repeat center center; background-size: cover">
+    </section>
+    {% endif %}
+    <nav>
+        <img src="{% static 'img/logo.png' %}" alt="" id="logo">
+        <h1>Трансопрт</h1>
+        <div class="btn-box">
+            <a href="{% url 'login' %}" class="btn">Увійти</a>
+            <a href="{% url 'registration' %}" class="btn">Зарегеструватися</a>
+            <a href="{% url 'index' %}" class="btn">Головна</a>
+            <a href="{% url 'catalogue' %}" class="btn">Каталог</a>
+        </div>
+    </nav>
+    {% block content %} {% endblock %}
+    <footer>
+        <address>
+            Підтримка:<br>
+            Виконавець: Ясінський Дмитро група 17<br>
+            Телефон: +380 93 94 8134<br>
+            Адрес: Парк "Совки" Kyiv, 02000<br>
+            Наші соц-мережі:<br>
+            <a href="https://www.instagram.com/" target="_blank">
+                <img src="{% static 'img/contect/insta.jfif' %}" alt="instagram" width="50rem" height="50rem">
+            </a>
+            <a href="https://www.facebook.com/?locale=ru_RU" target="_blank">
+                <img src="{% static 'img/contect/facebook_logo.png' %}" alt="facebook" width="50rem" height="50rem">
+            </a>
+            <img src="{% static 'img/logo.png' %}" alt="" id="footer-logo">
+        </address>
+    </footer>
+</body>
+
+</html>
