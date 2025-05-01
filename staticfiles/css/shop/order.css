@@ -76,9 +76,12 @@ aside hr {
 
 @media (max-width: 600px) {
   #order > figure {
-    max-width: 90%;
+    max-width: 95%;
     max-height: 90%;
     margin: 1rem auto;
+  }
+  #content {
+    display: block;
   }
   #main-btn {
     margin: 1rem;
